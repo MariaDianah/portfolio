@@ -1,13 +1,11 @@
-import { ApplicationModule, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ExternoComponent } from './externo.component';
-import { ContatoModule } from './contato/contato.module';
-import { ContratoModule } from './contrato/contrato.module';
-import { ProjetoModule } from './projeto/projeto.module';
 import { ExternoRoutingModule } from './externo-routing.module';
 import { LayoutModule } from 'src/app/core/layout/layout.module';
 import { LoadingModule } from 'src/app/shared/components/loading/loading.module';
 import { SnackbarModule } from 'src/app/shared/components/snackbar/snackbar.module';
+import { RodapeModule } from 'src/app/core/rodape/rodape.module';
 
 
 
@@ -19,6 +17,7 @@ import { SnackbarModule } from 'src/app/shared/components/snackbar/snackbar.modu
     CommonModule,
     ExternoRoutingModule,
     LayoutModule,
+    RodapeModule,
     LoadingModule,
     SnackbarModule
   ]

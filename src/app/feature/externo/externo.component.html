@@ -12,3 +12,16 @@
   </app-layout>
   
   <router-outlet></router-outlet>
+
+  <app-rodape>
+    <ng-container *ngIf="!navegacaoFim; else conteudo">
+      <div class="carregamento">
+        <p>Carregando...</p>
+        <app-loading [tamanho]="50"></app-loading>
+      </div>
+    </ng-container>
+    <ng-template #conteudo>
+      <router-outlet></router-outlet>
+    </ng-template>
+    <app-snackbar></app-snackbar>
+  </app-rodape>
