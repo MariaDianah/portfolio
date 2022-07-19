@@ -1,0 +1,79 @@
+.conteudo-total {
+    padding: 1rem 10px;
+}
+
+.total-elementos {
+    margin-left: 1.2rem;
+    span {
+        font-size: 16px;
+    }
+    @media (max-width: 576px) {
+        margin-left: 0.2rem;
+        span {
+            font-size: 12px;
+        }
+    }
+}
+
+.botoes {
+    .btn-seta-dupla,
+    .btn-numerico {
+        display: block;
+        @media (max-width: 576px) {
+            display: none;
+        }
+    }
+    button {
+        padding: 3px 5px;
+        margin: 0 5px;
+        border: none;
+        border-radius: 3px;
+        box-shadow: inset 0px 0px 10px -4px rgba(0, 0, 0, 0.75);
+        width: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--cinza-1);
+        .icones-setas {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            fill: black;
+        }
+
+        .seta-dupla {
+            width: 15px;
+            height: 15px;
+        }
+
+        .seta-simples {
+            width: 10px;
+            height: 10px;
+        }
+    }
+    .ativo {
+        background-color: var(--titulo-janela-fundo);
+        box-shadow: none;
+        color: white;
+    }
+    .btn-seta:disabled {
+        opacity: 0.5;
+    }
+}
+
+.pagina-select {
+    display: block;
+    @media (max-width: 576px) {
+        display: none;
+    }
+}
+
+.selecao {
+    border: none;
+    box-shadow: inset 0px 0px 10px -4px rgba(0, 0, 0, 0.75);
+    border-radius: 3px;
+    display: block;
+    @media (max-width: 576px) {
+        display: none;
+    }
+}

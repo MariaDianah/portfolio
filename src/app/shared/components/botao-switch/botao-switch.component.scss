@@ -1,0 +1,78 @@
+label {
+  font-weight: 100;
+  margin-bottom: 0;
+  margin-left: 0.5rem;
+  overflow: hidden;
+  padding-left: 0.4rem;
+  position: relative;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  &::before {
+    background-color: var(--titulo-campo-fonte);
+    border-radius: 100px;
+    content: "";
+    height: 1rem;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 3px;
+  }
+  &.obrigatorio::after {
+    color: var(--titulo-campo-fonte);
+    content: "*";
+    font-size: 1.2rem;
+    position: absolute;
+  }
+}
+
+.botoes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 15px;
+}
+
+.btn-falso {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 22.5px;
+  background-color: #b60000;
+  border: none;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  transition: 0.1s all ease-in-out;
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+    height: 15px;
+    fill: white;
+  }
+}
+
+.btn-verdadeiro {
+  background-color: var(--cor-secundaria-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 17.5px;
+  border: none;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  transition: 0.1s all ease-in-out;
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    fill: white;
+  }
+}
+
+.inativo {
+  background: var(--cinza-3);
+}

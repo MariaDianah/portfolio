@@ -1,0 +1,50 @@
+<div class="d-flex justify-content-between align-itens-center conteudo-total">
+    <div class="total-elementos d-flex justify-content-center align-itens-center">
+        <span class="text-muted">Total de Elementos: {{quantidadeItens}}</span>
+    </div>
+    <div class="d-flex flex-row">
+        <div class="d-flex justify-content-center align-itens-center botoes">
+
+            <button (click)="primariaPagina()" [disabled]="indicePagina === 0" class="btn-seta btn-seta-dupla"
+                title="Ir para primeira página">
+                <div [inlineSVG]="'assets/icons/paginacao/seta-dupla-esquerda.svg'" class="icones-setas seta-dupla">
+                </div>
+            </button>
+
+            <button (click)="paginaAnterior()" [disabled]="indicePagina === 0" class="btn-seta"
+                title="Voltar para página anterior">
+                <div [inlineSVG]="'assets/icons/paginacao/seta-esquerda.svg'" class="icones-setas seta-simples"></div>
+            </button>
+
+            <button class="btn-numerico" *ngIf="(indicePagina === totalPaginas - 1) && (totalPaginas !== 1) && (totalPaginas !== 2)"
+                (click)="selecionarPagina(indicePagina - 2)">{{indicePagina - 1}}</button>
+            <button class="btn-numerico" *ngIf="indicePagina !== 0" (click)="selecionarPagina(indicePagina - 1)">{{indicePagina}}</button>
+
+            <button class="ativo">{{indicePagina + 1}}</button>
+            
+            <button class="btn-numerico" *ngIf="indicePagina !== totalPaginas - 1"
+                (click)="selecionarPagina(indicePagina + 1)">{{indicePagina + 2}}</button>
+            <button class="btn-numerico" *ngIf="(indicePagina === 0) && (totalPaginas !== 1) && (totalPaginas !== 2)"
+                (click)="selecionarPagina(indicePagina + 2)">{{indicePagina + 3}}</button>
+
+            <button (click)="proximaPagina()" [disabled]="indicePagina === totalPaginas - 1" class="btn-seta"
+                title="Ir para próxima página">
+                <div [inlineSVG]="'assets/icons/paginacao/seta-direita.svg'" class="icones-setas seta-simples"></div>
+            </button>
+            <button (click)="ultimaPagina()" [disabled]="indicePagina === totalPaginas - 1"
+                class="btn-seta btn-seta-dupla" title="Ir para última página">
+                <div [inlineSVG]="'assets/icons/paginacao/seta-dupla-direita.svg'" class="icones-setas seta-dupla">
+                </div>
+            </button>
+
+        </div>
+        <div class="d-flex justify-content-center align-itens-center pagina-select">
+            <select name="tamanhoPagina" id="tamanhoPagina" [(ngModel)]="tamanhoPagina"
+                (ngModelChange)="selectItensPagina()" class="selecao">
+                <ng-container *ngFor="let opcoes of itensPorPagina">
+                    <option [value]="opcoes">{{opcoes}}</option>
+                </ng-container>
+            </select>
+        </div>
+    </div>
+</div>

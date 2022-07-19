@@ -1,0 +1,9 @@
+<div class="menu-drop">
+    <button class="botao-menu-drop" type="button" (click)="menuDrop = !menuDrop">
+        <div [inlineSVG]="'assets/icons/botao-menu.svg'" class="icone-botao-menu"></div>
+    </button>
+    <div #botoes class="menu" [ngStyle]="{'max-height': menuDrop ? verificarAltura() : '0px'}">
+        <span class="menu-titulo">Menu</span>
+        <ng-content></ng-content>
+    </div>
+</div>

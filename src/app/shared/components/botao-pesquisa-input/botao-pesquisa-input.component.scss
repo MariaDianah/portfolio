@@ -1,0 +1,29 @@
+.botao-busca {
+    align-items: center;
+    background-color: white;
+    border: none;
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+    bottom: 2px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: 2px;
+    top: 31px;
+    width: 2.1rem;
+    transition: all 0.2s ease-in-out;
+    .icone-busca {
+        fill: var(--titulo-janela-fundo);
+        height: 15px;
+        left: 10px;
+        position: absolute;
+        top: 2px;
+        width: 15px;
+    }
+    &:disabled {
+        background-color: var(--cinza-3);
+        .icone-busca {
+            fill: var(--cinza-5);
+        }
+    }
+}

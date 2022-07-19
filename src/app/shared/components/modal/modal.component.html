@@ -1,0 +1,5 @@
+<div id="modal-fundo" class="modal-fundo" (click)="emitirClickFundo($event)">
+    <div class="modal-conteudo" [ngClass]="{'ativo' : animacaoAtiva}">
+        <ng-content></ng-content>
+    </div>
+</div>

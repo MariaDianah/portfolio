@@ -1,0 +1,77 @@
+@mixin icone {
+    fill: white;
+    height: 20px;
+    width: 20px;
+  }
+  
+  @mixin ponteiro {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  
+  .cabecalho {
+    background-color: var(--cor-titulo-tercearia);
+    box-shadow: 0 -2px 15px 2px rgba(0, 0, 0, 0.75);
+    height: 80px;
+    overflow: visible;
+    position: relative;
+    width: 100vw;
+  }
+  
+  .logo {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 8px;
+    margin-right: 8px;
+    transition: 0.2s all linear;
+    img {
+      height: calc(100% - 12px);
+      transition: 0.2s all linear;
+      @include ponteiro;
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+    @media (max-width: 768px) {
+      display: none;
+      margin: 0;
+    }
+  }
+  
+  .badge {
+    z-index: 1;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  
+  .barra-central {
+    .icone-menu-lateral {
+      @include ponteiro;
+      fill: #55bea4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.35s linear;
+      background-color: var(--cor-titulo-secundario);
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      padding: 10px;
+    }
+  }
+    
+  .nome-info {
+    display: flex;
+    @media (max-width: 1200px) {
+      display: none;
+    }
+    @media (max-width: 768px) {
+      display: flex;
+    }
+    @media (max-width: 576px) {
+      display: none;
+    }
+  }

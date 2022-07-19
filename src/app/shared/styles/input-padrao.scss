@@ -1,0 +1,218 @@
+.input-principal {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  position: relative;
+  label {
+    font-weight: 300;
+    margin-bottom: 5px;
+    margin-left: 0.5rem;
+    overflow: hidden;
+    padding-left: 0.4rem;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: var(--cor-label-principal);
+    &::before {
+      background-color: var(--cor-label-principal);
+      border-radius: 100px;
+      content: "";
+      height: 1rem;
+      left: 0;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      width: 3px;
+    }
+    &.obrigatorio::after {
+      color: var(--cor-label-principal);
+      content: "*";
+      font-size: 1.2rem;
+      position: absolute;
+    }
+  }
+  input {
+    background-color: var(--cor-campo-principal);
+    color: var(--cor-texto-principal);
+    border: 2px solid white;
+    border-radius: 5px;
+    height: 2.2rem;
+    padding: 0 8px;
+    transition: 0.1s all linear;
+    width: 100%;
+    &:focus {
+      border-color: var(--cor-hover-principal);
+    }
+    &:disabled,
+    &:read-only {
+      background-color: var(--cor-bloqueio-principal);
+      color: var(--cor-bloqueio-secundario);
+      border-color: white;
+    }
+  } 
+  &.pesquisa {
+    input {
+      padding-right: 2.2rem;
+    }
+  }
+  &.invalido {
+    input {
+      border-color: var(--cor-mensagem-erro);
+    }
+  }
+  .erro {
+    padding: 5px;
+    background-color: var(--cor-mensagem-erro);
+    border-radius: 5px;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    font-weight: 300;
+  }
+}
+
+.input-secundario {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  position: relative;
+  label {
+    font-weight: 300;
+    margin-bottom: 5px;
+    margin-left: 0.5rem;
+    overflow: hidden;
+    padding-left: 0.4rem;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: var(--cor-label-secundario);
+    &::before {
+      background-color: var(--cor-label-secundario);
+      border-radius: 100px;
+      content: "";
+      height: 1rem;
+      left: 0;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      width: 3px;
+    }
+    &.obrigatorio::after {
+      color: var(--cor-label-secundario);
+      content: "*";
+      font-size: 1.2rem;
+      position: absolute;
+    }
+  }
+  input {
+    background-color: var(--cor-campo-secundario);
+    color: var(--cor-texto-secundario);
+    border: 2px solid white;
+    border-radius: 5px;
+    height: 2.2rem;
+    padding: 0 8px;
+    transition: 0.1s all linear;
+    width: 100%;
+    &:focus {
+      border-color: var(--cor-hover-secundario);
+    }
+    &:disabled,
+    &:read-only {
+      background-color: var(--cor-bloqueio-principal);
+      color: var(--cor-bloqueio-secundario);
+      border-color: white;
+    }
+  } 
+  &.pesquisa {
+    input {
+      padding-right: 2.2rem;
+    }
+  }
+  &.invalido {
+    input {
+      border-color: var(--cor-mensagem-erro);
+    }
+  }
+  .erro {
+    padding: 5px;
+    background-color: var(--cor-mensagem-erro);
+    border-radius: 5px;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    font-weight: 300;
+  }
+}
+
+.input-tercearia {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  position: relative;
+  label {
+    font-weight: 300;
+    margin-bottom: 5px;
+    margin-left: 0.5rem;
+    overflow: hidden;
+    padding-left: 0.4rem;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: var(--cor-label-tercearia);
+    &::before {
+      background-color: var(--cor-label-tercearia);
+      border-radius: 100px;
+      content: "";
+      height: 1rem;
+      left: 0;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      width: 3px;
+    }
+    &.obrigatorio::after {
+      color: var(--cor-label-tercearia);
+      content: "*";
+      font-size: 1.2rem;
+      position: absolute;
+    }
+  }
+  input {
+    background-color: var(--cor-campo-tercearia);
+    color: var(--cor-texto-tercearia);
+    border: 2px solid white;
+    border-radius: 5px;
+    height: 2.2rem;
+    padding: 0 8px;
+    transition: 0.1s all linear;
+    width: 100%;
+    &:focus {
+      border-color: var(--cor-hover-tercearia);
+    }
+    &:disabled,
+    &:read-only {
+      background-color: var(--cor-bloqueio-principal);
+      color: var(--cor-bloqueio-secundario);
+      border-color: white;
+    }
+  } 
+  &.pesquisa {
+    input {
+      padding-right: 2.2rem;
+    }
+  }
+  &.invalido {
+    input {
+      border-color: var(--cor-mensagem-erro);
+    }
+  }
+  .erro {
+    padding: 5px;
+    background-color: var(--cor-mensagem-erro);
+    border-radius: 5px;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    font-weight: 300;
+  }
+}

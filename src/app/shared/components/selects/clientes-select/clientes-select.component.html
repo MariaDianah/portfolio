@@ -1,0 +1,12 @@
+<div class="ng-select-padrao" [ngClass]="{'invalido' : invalido}">
+    <label [ngClass]="{'obrigatorio' : obrigatorio} " [title]="label">{{label}}</label>
+    <ng-select [(ngModel)]="cpf" [notFoundText]="notFoundText" (change)="emitChange($event)" (blur)="onTouch()"
+      (clear)="limpar()" (close)="limpar()" (focus)="onFocus()" (search)="digitacao($event)" (scrollToEnd)="scrollToEnd()"
+      [readonly]="readonly" [multiple]="multiple">
+      <ng-option [value]="0" *ngIf="mostrarOpcaoTodos">TODOS</ng-option>
+      <ng-option *ngFor="let banco of listaClientes" [value]="banco.cpf">
+        {{ banco.cpf }} - {{ banco.clienteNome }}
+      </ng-option>
+    </ng-select>
+  </div>
+  

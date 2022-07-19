@@ -1,0 +1,206 @@
+.select-principal {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  position: relative;
+  &::after {
+    align-items: center;
+    background-color: white;
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+    bottom: 2px;
+    content: url("/assets/icons/seta-select.svg");
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: 2px;
+    top: 31px; 
+    width: 2.1rem;
+  }
+  label {
+    font-weight: 300;
+    margin-bottom: 5px;
+    margin-left: 0.5rem;
+    overflow: hidden;
+    padding-left: 0.4rem;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    &::before {
+      background-color: var(--cor-label-principal);
+      border-radius: 100px;
+      content: "";
+      height: 1rem;
+      left: 0;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      width: 3px;
+    }
+    &.obrigatorio::after {
+      content: "*";
+      color: var(--cor-label-principal);
+      font-size: 1.2rem;
+      position: absolute;
+    }
+  }
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: var(--cor-campo-principal);
+    border: 2px solid white;
+    border-radius: 5px;
+    height: 2.2rem;
+    padding: 0 8px;
+    transition: 0.1s all linear;
+    width: 100%;
+    &:focus {
+      border-color: var(--cor-borda-principal);
+    } 
+    &.disabled {
+      background-color: var(--cor-bloqueio-principal);
+      border-color: white;
+      pointer-events: none;
+     touch-action: none
+    }
+  }
+}
+
+.select-secundario {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  position: relative;
+  &::after {
+    align-items: center;
+    background-color: white;
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+    bottom: 2px;
+    content: url("/assets/icons/seta-select.svg");
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: 2px;
+    top: 31px; 
+    width: 2.1rem;
+  }
+  label {
+    font-weight: 300;
+    margin-bottom: 5px;
+    margin-left: 0.5rem;
+    overflow: hidden;
+    padding-left: 0.4rem;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    &::before {
+      background-color: var(--cor-label-secundario);
+      border-radius: 100px;
+      content: "";
+      height: 1rem;
+      left: 0;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      width: 3px;
+    }
+    &.obrigatorio::after {
+      content: "*";
+      color: var(--cor-label-secundario);
+      font-size: 1.2rem;
+      position: absolute;
+    }
+  }
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: var(--cor-campo-secundario);
+    border: 2px solid white;
+    border-radius: 5px;
+    height: 2.2rem;
+    padding: 0 8px;
+    transition: 0.1s all linear;
+    width: 100%;
+    &:focus {
+      border-color: var(--cor-borda-secundario);
+    } 
+    &.disabled {
+      background-color: var(--cor-bloqueio-secundario);
+      border-color: white;
+      pointer-events: none;
+     touch-action: none
+    }
+  }
+}
+
+.select-tercearia {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  position: relative;
+  &::after {
+    align-items: center;
+    background-color: white;
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+    bottom: 2px;
+    content: url("/assets/icons/seta-select.svg");
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: 2px;
+    top: 31px; 
+    width: 2.1rem;
+  }
+  label {
+    font-weight: 300;
+    margin-bottom: 5px;
+    margin-left: 0.5rem;
+    overflow: hidden;
+    padding-left: 0.4rem;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    &::before {
+      background-color: var(--cor-label-tercearia);
+      border-radius: 100px;
+      content: "";
+      height: 1rem;
+      left: 0;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      width: 3px;
+    }
+    &.obrigatorio::after {
+      content: "*";
+      color: var(--cor-label-tercearia);
+      font-size: 1.2rem;
+      position: absolute;
+    }
+  }
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: var(--cor-campo-tercearia);
+    border: 2px solid white;
+    border-radius: 5px;
+    height: 2.2rem;
+    padding: 0 8px;
+    transition: 0.1s all linear;
+    width: 100%;
+    &:focus {
+      border-color: var(--cor-borda-tercearia);
+    } 
+    &.disabled {
+      background-color: var(--cor-bloqueio-tercearia);
+      border-color: white;
+      pointer-events: none;
+     touch-action: none
+    }
+  }
+}

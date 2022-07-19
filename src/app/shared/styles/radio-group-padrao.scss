@@ -1,0 +1,194 @@
+.radio-group-principal {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  position: relative;
+  & > label {
+    font-weight: 200;
+    overflow: hidden;
+    padding-left: 0.4rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    &::before { 
+      background-color: var(--cor-campo-principal);
+      border-radius: 100px;
+      content: "";
+      height: 1rem;
+      left: 0;
+      position: absolute;
+      top: 4px;
+      width: 3px;
+    }
+    &.obrigatorio::after {
+      color: var(--cor-texto-principal);
+      content: "*";
+      font-size: 1.2rem;
+      position: absolute;
+    }
+  }
+  & > fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    & > div {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      margin-right: 1.5rem;
+      label {
+        font-weight: 200;
+        margin-bottom: 0;
+        overflow: hidden;
+        padding-left: 0.3rem;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      input {
+        all: unset;
+        background-color: var(--cor-campo-principal);
+        border: 0.5px solid var(--cor-borda-principal);
+        border-radius: 50%;
+        color: var(--cor-texto-principal);
+        height: 0.75rem;
+        position: relative;
+        transition: all 0.1s linear;
+        width: 0.75rem;
+      } 
+      input:checked {
+        background-color: var(--cor-hover-principal);
+        border: 5px solid var(--cor-hover-secundario);
+        height: 0.25rem;
+        width: 0.25rem;
+      }
+    }
+  }
+}
+
+.radio-group-secundario {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  position: relative;
+  & > label {
+    font-weight: 200;
+    overflow: hidden;
+    padding-left: 0.4rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    &::before { 
+      background-color: var(--cor-campo-secundario);
+      border-radius: 100px;
+      content: "";
+      height: 1rem;
+      left: 0;
+      position: absolute;
+      top: 4px;
+      width: 3px;
+    }
+    &.obrigatorio::after {
+      color: var(--cor-texto-secundario);
+      content: "*";
+      font-size: 1.2rem;
+      position: absolute;
+    }
+  }
+  & > fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    & > div {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      margin-right: 1.5rem;
+      label {
+        font-weight: 200;
+        margin-bottom: 0;
+        overflow: hidden;
+        padding-left: 0.3rem;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      input {
+        all: unset;
+        background-color: var(--cor-campo-secundario);
+        border: 0.5px solid var(--cor-borda-secundario);
+        border-radius: 50%;
+        color: var(--cor-texto-secundario);
+        height: 0.75rem;
+        position: relative;
+        transition: all 0.1s linear;
+        width: 0.75rem;
+      } 
+      input:checked {
+        background-color: var(--cor-hover-principal);
+        border: 5px solid var(--cor-hover-secundario);
+        height: 0.25rem;
+        width: 0.25rem;
+      }
+    }
+  }
+}
+
+.radio-group-terciario {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  position: relative;
+  & > label {
+    font-weight: 200;
+    overflow: hidden;
+    padding-left: 0.4rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    &::before { 
+      background-color: var(--cor-campo-tercearia);
+      border-radius: 100px;
+      content: "";
+      height: 1rem;
+      left: 0;
+      position: absolute;
+      top: 4px;
+      width: 3px;
+    }
+    &.obrigatorio::after {
+      color: var(--cor-texto-tercearia);
+      content: "*";
+      font-size: 1.2rem;
+      position: absolute;
+    }
+  }
+  & > fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    & > div {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      margin-right: 1.5rem;
+      label {
+        font-weight: 200;
+        margin-bottom: 0;
+        overflow: hidden;
+        padding-left: 0.3rem;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      input {
+        all: unset;
+        background-color: var(--cor-campo-tercearia);
+        border: 0.5px solid var(--cor-borda-tercearia);
+        border-radius: 50%;
+        color: var(--cor-texto-tercearia);
+        height: 0.75rem;
+        position: relative;
+        transition: all 0.1s linear;
+        width: 0.75rem;
+      } 
+      input:checked {
+        background-color: var(--cor-hover-principal);
+        border: 5px solid var(--cor-hover-secundario);
+        height: 0.25rem;
+        width: 0.25rem;
+      }
+    }
+  }
+}

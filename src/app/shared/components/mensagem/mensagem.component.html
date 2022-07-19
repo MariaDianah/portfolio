@@ -1,0 +1,20 @@
+<div class="caixa-mensagem">
+    <div class="interno" [ngClass]="{'animacao': animacaoAtiva}">
+        <div class="icone-fundo" 
+            [ngClass]="{
+                'icone-fundo-sucesso': tipoMensagem === TipoMensagemEnum.SUCESSO,
+                'icone-fundo-erro': tipoMensagem === TipoMensagemEnum.ERRO,
+                'icone-fundo-alerta': tipoMensagem === TipoMensagemEnum.ALERTA
+            }">
+            <div *ngIf="tipoMensagem === TipoMensagemEnum.SUCESSO" [inlineSVG]="'assets/icons/mensagens/sucesso.svg'" class="icone-sucesso"></div>
+            <div *ngIf="tipoMensagem === TipoMensagemEnum.ERRO" [inlineSVG]="'assets/icons/mensagens/erro.svg'" class="icone-erro"></div>
+            <div *ngIf="tipoMensagem === TipoMensagemEnum.ALERTA" [inlineSVG]="'assets/icons/mensagens/alerta.svg'" class="icone-alerta"></div>
+        </div>
+        <div class="mensagem">
+            <p>{{mensagem}}</p>
+            <div class="botao">
+                <button (click)="fechar()">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>

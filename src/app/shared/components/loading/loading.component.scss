@@ -1,0 +1,75 @@
+.loading {
+    position: relative;
+    div {
+        position: absolute;
+        border-radius: 50%;
+        animation: spiner 1s ease-in-out infinite;
+        &.escuro {
+            background-color: var(--titulo-janela-fundo);
+        }
+        &.claro {
+            background-color: var(--cor-secundaria-1);
+        }
+        &.branco {
+            background-color: white;
+        }
+    }
+    ._1 {
+        top: 5%;
+        left: 50%;
+        animation-delay: -1.125s;
+    }
+    ._2 {
+        top: 18.1801948466%;
+        left: 81.8198051534%;
+        animation-delay: -1.25s;
+    }
+    ._3 {
+        top: 50%;
+        left: 95%;
+        animation-delay: -1.375s;
+    }
+    ._4 {
+        top: 81.8198051534%;
+        left: 81.8198051534%;
+        animation-delay: -1.5s;
+    }
+    ._5 {
+        top: 94.9999999966%;
+        left: 50.0000000005%;
+        animation-delay: -1.625s;
+    }
+    ._6 {
+        top: 81.8198046966%;
+        left: 18.1801949248%;
+        animation-delay: -1.75s;
+    }
+    ._7 {
+        top: 49.9999750815%;
+        left: 5.0000051215%;
+        animation-delay: -1.875s;
+    }
+    ._8 {
+        top: 18.179464974%;
+        left: 18.1803700518%;
+        animation-delay: -2s;
+    }
+}
+
+@keyframes spiner {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}

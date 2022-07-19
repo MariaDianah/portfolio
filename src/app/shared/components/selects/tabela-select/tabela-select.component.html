@@ -1,0 +1,12 @@
+<div class="ng-select-padrao" [ngClass]="{'invalido' : invalido}">
+    <label [ngClass]="{'obrigatorio' : obrigatorio} " [title]="label">{{label}}</label>
+    <ng-select [(ngModel)]="nomeTabela" [notFoundText]="notFoundText" (change)="emitChange($event)" (blur)="onTouch()"
+      (clear)="limpar()" (close)="limpar()" (focus)="onFocus()" (search)="digitacao($event)" (scrollToEnd)="scrollToEnd()"
+      [readonly]="readonly" [multiple]="multiple">
+      <ng-option [value]="" *ngIf="mostrarOpcaoTodos">TODOS</ng-option>
+      <ng-option *ngFor="let banco of listaTabelas" [value]="banco.nomeTabela">
+        {{ banco.nomeTabela }}
+      </ng-option>
+    </ng-select>
+  </div>
+  

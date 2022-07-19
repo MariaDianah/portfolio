@@ -1,0 +1,35 @@
+<ng-container *ngIf="!!snackbarModel && snackbarModel.length > 0">
+  <div
+    class="snackbar d-flex flex-column animacao"
+    *ngFor="let caixaSnack of snackbarModel; let i = index"
+    [ngStyle]="{
+      'bottom.px': i * 130
+    }"
+  >
+    <div
+      class="titulo-snackbar d-flex align-items-center justify-content-between"
+    >
+      <div
+        class="
+          titulo-secundario
+          d-flex
+          justify-content-center
+          align-items-center
+          mt-2
+          ml-2
+        "
+      >
+        <div inlineSVG="../../../../assets/icons/icone-notificacao.svg"></div>
+        <h4 class="d-flex align-items-center">{{ caixaSnack.titulo }}</h4>
+      </div>
+      <a
+        class="button-fechar fonte-fina"
+        (click)="removerCaixa(caixaSnack.hash)"
+        >X</a
+      >
+    </div>
+    <div class="descricao-snackbar d-flex pl-4 pt-2">
+      <p>{{ caixaSnack.mensagem }}</p>
+    </div>
+  </div>
+</ng-container>

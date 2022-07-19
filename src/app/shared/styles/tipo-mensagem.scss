@@ -1,0 +1,19 @@
+.msg-sucesso,
+.msg-erro,
+.msg-alerta,
+.msg-padrao {
+  font-weight: 300;
+}
+
+.msg-sucesso {
+    color: var(--mensagem-sucesso);
+}
+.msg-erro {
+    color:  var(--mensagem-erro);
+}
+.msg-alerta {
+    color: var(--mensagem-alerta);
+}
+.msg-padrao {
+    color: var(--menagem-padrao); 
+}

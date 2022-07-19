@@ -1,0 +1,124 @@
+.snackbar {
+  max-width: 380px;
+  min-width: 300px;
+  height: 120px;
+  position: fixed;
+  bottom: 20px;
+  right: 25px;
+  background: radial-gradient(
+    50% 306.35% at 0% 42.17%,
+    rgba(230, 230, 231, 0.9) 0%,
+    rgba(196, 196, 196, 0.9) 100%
+  );
+  border-radius: 7px;
+
+  .titulo-snackbar {
+    height: 40%;
+    width: 100%;
+    border-radius: 7px 7px 0px 0px;
+    background: linear-gradient(
+      88.28deg,
+      rgba(24, 34, 92, 0.9) -234.56%,
+      rgba(85, 190, 164, 0.9) 93.09%
+    );
+
+    h4 {
+      font-weight: 800;
+      font-size: 16px;
+      color: #fff;
+      text-transform: uppercase;
+
+      @media (max-width: 300px) {
+        font-size: 12px;
+      }
+    }
+
+    .button-fechar {
+      width: 20px;
+      font-size: 13px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 8px;
+      background: rgba(63, 133, 137, 0.4);
+      border-radius: 2px;
+      text-decoration: none;
+      color: #fff;
+      transition: 0.4s opacity;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  .descricao-snackbar {
+    line-height: 15px;
+    opacity: 0.95;
+    overflow: auto;
+    p {
+      width: 100%;
+      max-height: 100px;
+      padding-right: 7px;
+    }
+
+    &::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(85, 190, 164, 0.9);
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-corner {
+      background-color: transparent;
+    }
+  }
+
+  &.animacao {
+    -webkit-animation-name: fadeInRight;
+    -webkit-animation-duration: 0.8s;
+    -webkit-animation-fill-mode: both;
+
+    animation-name: fadeInRight;
+    animation-duration: 0.8s;
+    animation-fill-mode: both;
+  }
+
+  @media (max-width: 767px) {
+    min-width: 0px;
+    right: 10px;
+    left: 10px;
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

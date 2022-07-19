@@ -1,0 +1,13 @@
+<div class="btn-switch">
+    <ng-container *ngIf="label">
+        <label for="botoes" [title]="label">{{label}}</label>
+    </ng-container>
+    <div id="botoes" name="botoes" class="botoes">
+        <button class="btn-falso" (click)="alterarValor(false)" [ngClass]="valor ? 'inativo' : ''">
+            <div [inlineSVG]="'assets/icons/botao-switch/errado.svg'"></div>
+        </button>
+        <button class="btn-verdadeiro" (click)="alterarValor(true)" [ngClass]="valor ? '' : 'inativo'">
+            <div [inlineSVG]="'assets/icons/botao-switch/certo.svg'"></div>
+        </button>
+    </div>
+</div>

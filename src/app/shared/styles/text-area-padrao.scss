@@ -1,0 +1,188 @@
+.text-area-principal {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  position: relative;
+  label {
+    font-weight: 300;
+    margin-bottom: 5px;
+    margin-left: 0.5rem;
+    overflow: hidden;
+    padding-left: 0.4rem;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    &::before {
+      background-color: var(--cor-label-principal);
+      border-radius: 100px;
+      content: ""; 
+      height: 1rem;
+      left: 0;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      width: 3px;
+    }
+    &.obrigatorio::after {
+      content: "*";
+      color: var(--cor-label-principal);
+      font-size: 1.2rem;
+      position: absolute;
+    } 
+  }
+  textarea {
+    background-color: var(--cor-campo-principal);
+    border: 2px solid var(--cor-borda-principal);
+    border-radius: 5px;
+    padding: 8px;
+    transition: 0.1s all linear;
+    &:focus {
+      border-color: var(---cor-hover-principal);
+    }
+    &:disabled,
+    &:read-only {
+      background-color: var(--cor-bloqueio-principal);
+      border-color: --cor-bloqueio-secundario;
+    }
+  }
+  &.invalido {
+    textarea {
+      border-color: var(--cor-mensagem-erro);
+    }
+  }
+  .erro {
+    padding: 5px;
+    background-color: var(--cor-mensagem-erro);
+    border-radius: 5px;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    font-weight: 300;
+  }
+}
+
+.text-area-secundario {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  position: relative;
+  label {
+    font-weight: 300;
+    margin-bottom: 5px;
+    margin-left: 0.5rem;
+    overflow: hidden;
+    padding-left: 0.4rem;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    &::before {
+      background-color: var(--cor-label-secundario);
+      border-radius: 100px;
+      content: ""; 
+      height: 1rem;
+      left: 0;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      width: 3px;
+    }
+    &.obrigatorio::after {
+      content: "*";
+      color: var(--cor-label-secundario);
+      font-size: 1.2rem;
+      position: absolute;
+    } 
+  }
+  textarea {
+    background-color: var(--cor-campo-secundario);
+    border: 2px solid var(--cor-borda-secundario);
+    border-radius: 5px;
+    padding: 8px;
+    transition: 0.1s all linear;
+    &:focus {
+      border-color: var(---cor-hover-secundario);
+    }
+    &:disabled,
+    &:read-only {
+      background-color: var(--cor-bloqueio-principal);
+      border-color: --cor-bloqueio-secundario;
+    }
+  }
+  &.invalido {
+    textarea {
+      border-color: var(--cor-mensagem-erro);
+    }
+  }
+  .erro {
+    padding: 5px;
+    background-color: var(--cor-mensagem-erro);
+    border-radius: 5px;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    font-weight: 300;
+  }
+}
+
+.text-area-tercearia {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  position: relative;
+  label {
+    font-weight: 300;
+    margin-bottom: 5px;
+    margin-left: 0.5rem;
+    overflow: hidden;
+    padding-left: 0.4rem;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    &::before {
+      background-color: var(--cor-label-tercearia);
+      border-radius: 100px;
+      content: ""; 
+      height: 1rem;
+      left: 0;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      width: 3px;
+    }
+    &.obrigatorio::after {
+      content: "*";
+      color: var(--cor-label-tercearia);
+      font-size: 1.2rem;
+      position: absolute;
+    } 
+  }
+  textarea {
+    background-color: var(--cor-campo-tercearia);
+    border: 2px solid var(--cor-borda-tercearia);
+    border-radius: 5px;
+    padding: 8px;
+    transition: 0.1s all linear;
+    &:focus {
+      border-color: var(---cor-hover-tercearia);
+    }
+    &:disabled,
+    &:read-only {
+      background-color: var(--cor-bloqueio-principal);
+      border-color: --cor-bloqueio-secundario;
+    }
+  }
+  &.invalido {
+    textarea {
+      border-color: var(--cor-mensagem-erro);
+    }
+  }
+  .erro {
+    padding: 5px;
+    background-color: var(--cor-mensagem-erro);
+    border-radius: 5px;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    font-weight: 300;
+  }
+}
